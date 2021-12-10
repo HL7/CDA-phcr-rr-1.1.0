@@ -22,6 +22,7 @@
   Revision History:  28/03/19 Sarah Gaunt   Removed call to section-title template that was creating empty TOC link
   Revision History:  19/10/21 Sarah Gaunt   Added preferred language display
   Revision History:  20/10/21 Sarah Gaunt   Added processing for patient addr useable period
+  Revision History:  10/12/21 Tim Morris    Updated processing for patient addr useablePeriod/high where nullFlavor used
   
   Specification: ANSI/HL7 CDAR2
   
@@ -2115,13 +2116,14 @@
             <xsl:value-of select="$contact/n1:addr[string-length(n1:streetAddressLine) > 0 or string-length(n1:streetName) > 0 or string-length(n1:houseNumber) > 0 or string-length(n1:city) > 0 or string-length(n1:state) > 0 or string-length(n1:postalCode) > 0 or string-length(n1:county) > 0 or string-length(n1:country) > 0]"/>
         </xsl:variable>-->
         <xsl:variable name="vAddrCount">
+            <!--TM: 20211210 edit to allow nullFlavor in useablePeriod/high -->
             <xsl:value-of
-                select="count($contact/n1:addr[not(n1:useablePeriod/n1:high)][string-length(n1:streetAddressLine) > 0 or string-length(n1:streetName) > 0 or string-length(n1:houseNumber) > 0 or string-length(n1:city) > 0 or string-length(n1:state) > 0 or string-length(n1:postalCode) > 0 or string-length(n1:county) > 0 or string-length(n1:country) > 0])"
+                select="count($contact/n1:addr[not(n1:useablePeriod/n1:high) or (n1:useablePeriod/n1:high/@nullFlavor)][string-length(n1:streetAddressLine) > 0 or string-length(n1:streetName) > 0 or string-length(n1:houseNumber) > 0 or string-length(n1:city) > 0 or string-length(n1:state) > 0 or string-length(n1:postalCode) > 0 or string-length(n1:county) > 0 or string-length(n1:country) > 0])"
              />
         </xsl:variable>
-
+        <!--TM: 20211210 edit to allow nullFlavor in useablePeriod/high -->
         <xsl:for-each
-            select="$contact/n1:addr[not(n1:useablePeriod/n1:high)][string-length(n1:streetAddressLine) > 0 or string-length(n1:streetName) > 0 or string-length(n1:houseNumber) > 0 or string-length(n1:city) > 0 or string-length(n1:state) > 0 or string-length(n1:postalCode) > 0 or string-length(n1:county) > 0 or string-length(n1:country) > 0]">
+            select="$contact/n1:addr[not(n1:useablePeriod/n1:high) or (n1:useablePeriod/n1:high/@nullFlavor)][string-length(n1:streetAddressLine) > 0 or string-length(n1:streetName) > 0 or string-length(n1:houseNumber) > 0 or string-length(n1:city) > 0 or string-length(n1:state) > 0 or string-length(n1:postalCode) > 0 or string-length(n1:county) > 0 or string-length(n1:country) > 0]">
             <xsl:call-template name="show-address">
                 <xsl:with-param name="address" select="." />
             </xsl:call-template>
