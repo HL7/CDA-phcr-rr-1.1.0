@@ -1,6 +1,6 @@
 # CDA-phcr-rr-1.1.0
 
-Repo Name: CDA-phcr-rr-1.1.0 (Branch: CDA-phcr-rr-1.1.0)
+Repo Name: CDA-phcr-rr-1.1.0 (Branch: CDA-phcr-rr-1.1.1)
 
 Ballot code: CDAR2_IG_PHCR_R2_RR_D1.1
 
