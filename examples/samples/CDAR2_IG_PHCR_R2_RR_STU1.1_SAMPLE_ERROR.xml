@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    File:               CDAR2_IG_PHCR_R2_RR_D1_2017DEC_SAMPLE_ERROR.xml
-    Specification:      Public Health Case Report, Reportability Response, Release 1, STU Release 1 - US Realm
+    File:               CDAR2_IG_PHCR_R2_RR_STU1.1_SAMPLE_ERROR.xml
+    Specification:      Public Health Case Report, Reportability Response, Release 1, STU Release 1.1 - US Realm
     
     Created:            Mar 2017            Sarah Gaunt
     Updated:            Aug 2017            Sarah Gaunt       Preliminary updates based on ballot comments
@@ -41,7 +41,7 @@
     is considered to be published in R2.0.
 -->
 
-<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_IG_PHCR_R2_RR_D1_2017DEC_STYLESHEET.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../transforms/CDAR2_IG_PHCR_R2_RR_STU1.1_STYLESHEET.xsl"?>
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:voc="http://www.lantanagroup.com/voc" xmlns="urn:hl7-org:v3"
   xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../../schema/infrastructure/cda/CDA_SDTC.xsd">
   <!--
