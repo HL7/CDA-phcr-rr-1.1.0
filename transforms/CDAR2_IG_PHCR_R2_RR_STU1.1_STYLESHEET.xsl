@@ -23,6 +23,7 @@
   Revision History:  19/10/21 Sarah Gaunt   Added preferred language display
   Revision History:  20/10/21 Sarah Gaunt   Added processing for patient addr useable period
   Revision History:  10/12/21 Tim Morris    Updated processing for patient addr useablePeriod/high where nullFlavor used
+  Revision History:  18/05/23 Sarah Gaunt   Updated to not display SSN if it is present
   
   Specification: ANSI/HL7 CDAR2
   
@@ -1021,7 +1022,8 @@
                             <span class="td_label">Patient ID(s)</span>
                         </td>
                         <td class="td_header_role_value">
-                            <xsl:for-each select="n1:id">
+                            <!-- SG: Don't display id if it's an SSN -->
+                            <xsl:for-each select="n1:id[not(@root='2.16.840.1.113883.4.1')]">
                                 <xsl:call-template name="show-id" />
                                 <br />
                             </xsl:for-each>
