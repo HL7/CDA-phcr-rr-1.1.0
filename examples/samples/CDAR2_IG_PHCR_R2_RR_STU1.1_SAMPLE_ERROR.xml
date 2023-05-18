@@ -42,110 +42,111 @@
 -->
 
 <?xml-stylesheet type="text/xsl" href="../../transforms/CDAR2_IG_PHCR_R2_RR_STU1.1_STYLESHEET.xsl"?>
-<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:voc="http://www.lantanagroup.com/voc" xmlns="urn:hl7-org:v3"
-  xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../../schema/infrastructure/cda/CDA_SDTC.xsd">
-  <!--
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:voc="http://www.lantanagroup.com/voc" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../../schema/infrastructure/cda/CDA_SDTC.xsd">
+    <!--
         ********************************************************
         CDA Header
         ********************************************************
     -->
-  <!-- US Realm Header template -->
-  <realmCode code="US" />
-  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
-  <!-- [C-CDA R2.1] US Realm Header (V3) -->
-  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
-  <!-- [RR R1S1] Initial Public Health Case Report Reportability Response Document (RR) -->
-  <templateId root="2.16.840.1.113883.10.20.15.2.1.2" extension="2017-04-01" />
-  <!-- Globally unique document ID (extension) is scoped by vendor/software -->
-  <id root="18218889-5d7d-47d4-b329-31bb1c28d3b3" />
-  <!-- Document Code -->
-  <code code="88085-6" codeSystem="2.16.840.1.113883.6.1" displayName="Reportability response report Document Public health" />
-  <title>Reportability Response</title>
-  <effectiveTime value="20161212094421-0700" />
-  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="Normal" />
-  <languageCode code="en-US" />
-  <!--
+    <!-- US Realm Header template -->
+    <realmCode code="US" />
+    <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
+    <!-- [C-CDA R2.1] US Realm Header (V3) -->
+    <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+    <!-- [RR R1S1] Initial Public Health Case Report Reportability Response Document (RR) -->
+    <templateId root="2.16.840.1.113883.10.20.15.2.1.2" extension="2017-04-01" />
+    <!-- Globally unique document ID (extension) is scoped by vendor/software -->
+    <id root="18218889-5d7d-47d4-b329-31bb1c28d3b3" />
+    <!-- Document Code -->
+    <code code="88085-6" codeSystem="2.16.840.1.113883.6.1" displayName="Reportability response report Document Public health" />
+    <title>Reportability Response</title>
+    <effectiveTime value="20161212094421-0700" />
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="Normal" />
+    <languageCode code="en-US" />
+    <setId root="2.16.840.1.113883.19.5.99999.20" extension="STI744" />
+    <versionNumber value="1" />
+    <!--
         ********************************************************
         recordTarget: The patient
         ********************************************************
     -->
-  <!-- The patient is unknown due to eICR CDA document processing failure -->
-  <recordTarget>
-    <!-- Patient demographic information -->
-    <patientRole>
-      <!-- Fake root for sample -->
-      <id nullFlavor="NI" />
-      <addr>
-        <streetAddressLine nullFlavor="NI" />
-        <city nullFlavor="NI" />
-        <state nullFlavor="NI" />
-        <postalCode nullFlavor="NI" />
-      </addr>
-      <telecom nullFlavor="NI" />
-      <patient>
-        <name>
-          <given nullFlavor="NI" />
-          <family nullFlavor="NI" />
-        </name>
-        <administrativeGenderCode nullFlavor="NI" />
-        <birthTime nullFlavor="NI" />
-        <sdtc:deceasedInd nullFlavor="NI" />
-        <raceCode nullFlavor="NI" />
-        <ethnicGroupCode nullFlavor="NI" />
-        <languageCommunication>
-          <languageCode nullFlavor="NI" />
-        </languageCommunication>
-      </patient>
-    </patientRole>
-  </recordTarget>
-  <!--
+    <!-- The patient is unknown due to eICR CDA document processing failure -->
+    <recordTarget>
+        <!-- Patient demographic information -->
+        <patientRole>
+            <!-- Fake root for sample -->
+            <id nullFlavor="NI" />
+            <addr>
+                <streetAddressLine nullFlavor="NI" />
+                <city nullFlavor="NI" />
+                <state nullFlavor="NI" />
+                <postalCode nullFlavor="NI" />
+            </addr>
+            <telecom nullFlavor="NI" />
+            <patient>
+                <name>
+                    <given nullFlavor="NI" />
+                    <family nullFlavor="NI" />
+                </name>
+                <administrativeGenderCode nullFlavor="NI" />
+                <birthTime nullFlavor="NI" />
+                <sdtc:deceasedInd nullFlavor="NI" />
+                <raceCode nullFlavor="NI" />
+                <ethnicGroupCode nullFlavor="NI" />
+                <languageCommunication>
+                    <languageCode nullFlavor="NI" />
+                </languageCommunication>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <!--
         ********************************************************
         author
         ********************************************************
     -->
-  <author>
-    <time value="20161212100000-0700" />
-    <assignedAuthor>
-      <!--Id for authoring device - made up application OID-->
-      <id root="2.16.840.1.113883.3.72.5.20" />
-      <addr>
-        <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
-        <city>Ann Arbor</city>
-        <state>MI</state>
-        <postalCode>99999</postalCode>
-        <country>US</country>
-      </addr>
-      <telecom use="WP" value="tel:+1-(555)555-1002;ext=9998" />
-      <assignedAuthoringDevice>
-        <manufacturerModelName displayName="Platform" />
-        <softwareName displayName="Platform" />
-      </assignedAuthoringDevice>
-    </assignedAuthor>
-  </author>
+    <author>
+        <time value="20161212100000-0700" />
+        <assignedAuthor>
+            <!--Id for authoring device - made up application OID-->
+            <id root="2.16.840.1.113883.3.72.5.20" />
+            <addr>
+                <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
+                <city>Ann Arbor</city>
+                <state>MI</state>
+                <postalCode>99999</postalCode>
+                <country>US</country>
+            </addr>
+            <telecom use="WP" value="tel:+1-(555)555-1002;ext=9998" />
+            <assignedAuthoringDevice>
+                <manufacturerModelName displayName="Platform" />
+                <softwareName displayName="Platform" />
+            </assignedAuthoringDevice>
+        </assignedAuthor>
+    </author>
 
-  <!--
+    <!--
         ********************************************************
         custodian: The custodian of the CDA document is the generator of the document
         ********************************************************
     -->
-  <custodian>
-    <assignedCustodian>
-      <representedCustodianOrganization>
-        <id extension="88888888" root="2.16.840.1.113883.4.6" />
-        <name>Level Seven Healthcare, Inc.</name>
-        <telecom use="WP" value="tel:+1(555)555-3001" />
-        <addr>
-          <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
-          <city>Ann Arbor</city>
-          <state>MI</state>
-          <postalCode>99999</postalCode>
-          <country>US</country>
-        </addr>
-      </representedCustodianOrganization>
-    </assignedCustodian>
-  </custodian>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id extension="88888888" root="2.16.840.1.113883.4.6" />
+                <name>Level Seven Healthcare, Inc.</name>
+                <telecom use="WP" value="tel:+1(555)555-3001" />
+                <addr>
+                    <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
+                    <city>Ann Arbor</city>
+                    <state>MI</state>
+                    <postalCode>99999</postalCode>
+                    <country>US</country>
+                </addr>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
 
-  <!--
+    <!--
         ********************************************************
         informationRecipient: This primary informationRecipient contains the provider details. 
         The provider details are obtained from the eICR encompassingEncounter/responsibleParty/assignedEntity 
@@ -153,245 +154,233 @@
         This data is also contained in the RR encompassingEncounter/responsibleParty/assignedEntity.
         ********************************************************
     -->
-  <!-- typeCode="PRCP" indicates the primary information recipient -->
-  <informationRecipient typeCode="PRCP">
-    <!-- Provider -->
-    <intendedRecipient>
-      <!-- Provider ID -->
-      <id extension="6666666666666" root="2.16.840.1.113883.4.6" />
-      <!-- Provider Address -->
-      <addr>
-        <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
-        <city>City</city>
-        <state>State</state>
-        <postalCode>99999</postalCode>
-        <country>US</country>
-      </addr>
-      <!-- Provider Phone -->
-      <telecom use="WP" value="tel:+1-555-555-1002" />
-      <!-- Provider Fax -->
-      <telecom use="WP" value="fax:+1-555-955-1002" />
-      <!-- Provider email -->
-      <telecom use="WP" value="mailto:henrysevenmd@email.net" />
-      <informationRecipient>
-        <!-- Provider Name -->
-        <name>
-          <prefix>Dr.</prefix>
-          <given>Henry</given>
-          <family>Seven</family>
-        </name>
-      </informationRecipient>
-      <!-- Provider Facility/Office -->
-      <receivedOrganization>
-        <!-- Provider Facility/Office Name  -->
-        <name>Level Seven Healthcare, Inc.</name>
-        <!-- Provider Facility/Office Address -->
-        <addr>
-          <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
-          <city>City</city>
-          <state>State</state>
-          <postalCode>99999</postalCode>
-          <country>US</country>
-        </addr>
-      </receivedOrganization>
-    </intendedRecipient>
-  </informationRecipient>
+    <!-- typeCode="PRCP" indicates the primary information recipient -->
+    <informationRecipient typeCode="PRCP">
+        <!-- Provider -->
+        <intendedRecipient>
+            <!-- Provider ID -->
+            <id extension="6666666666666" root="2.16.840.1.113883.4.6" />
+            <!-- Provider Address -->
+            <addr>
+                <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
+                <city>City</city>
+                <state>State</state>
+                <postalCode>99999</postalCode>
+                <country>US</country>
+            </addr>
+            <!-- Provider Phone -->
+            <telecom use="WP" value="tel:+1-555-555-1002" />
+            <!-- Provider Fax -->
+            <telecom use="WP" value="fax:+1-555-955-1002" />
+            <!-- Provider email -->
+            <telecom use="WP" value="mailto:henrysevenmd@email.net" />
+            <informationRecipient>
+                <!-- Provider Name -->
+                <name>
+                    <prefix>Dr.</prefix>
+                    <given>Henry</given>
+                    <family>Seven</family>
+                </name>
+            </informationRecipient>
+            <!-- Provider Facility/Office -->
+            <receivedOrganization>
+                <!-- Provider Facility/Office Name  -->
+                <name>Level Seven Healthcare, Inc.</name>
+                <!-- Provider Facility/Office Address -->
+                <addr>
+                    <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
+                    <city>City</city>
+                    <state>State</state>
+                    <postalCode>99999</postalCode>
+                    <country>US</country>
+                </addr>
+            </receivedOrganization>
+        </intendedRecipient>
+    </informationRecipient>
 
-  <!-- typeCode="TRC" indicates a secondary information recipient such as a System Admin -->
-  <informationRecipient typeCode="TRC">
-    <intendedRecipient>
-      <id extension="6666666666666" root="2.16.840.1.113883.4.6" />
-      <addr>
-        <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
-        <city>Ann Arbor</city>
-        <state>MI</state>
-        <postalCode>99999</postalCode>
-        <country>US</country>
-      </addr>
-      <telecom use="WP" value="tel:+1-333-33-3333" />
-      <telecom use="WP" value="fax:+1-555-955-1002" />
-      <telecom use="WP" value="mailto:itadmin@email.net" />
-      <informationRecipient>
-        <name>
-          <given>I.T.</given>
-          <family>Admin</family>
-        </name>
-      </informationRecipient>
-      <receivedOrganization>
-        <name>Level Seven Healthcare, Inc.</name>
-        <addr>
-          <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
-          <city>Ann Arbor</city>
-          <state>MI</state>
-          <postalCode>99999</postalCode>
-          <country>US</country>
-        </addr>
-      </receivedOrganization>
-    </intendedRecipient>
-  </informationRecipient>
-  <!--
+    <!-- typeCode="TRC" indicates a secondary information recipient such as a System Admin -->
+    <informationRecipient typeCode="TRC">
+        <intendedRecipient>
+            <id extension="6666666666666" root="2.16.840.1.113883.4.6" />
+            <addr>
+                <streetAddressLine>1002 Healthcare Drive</streetAddressLine>
+                <city>Ann Arbor</city>
+                <state>MI</state>
+                <postalCode>99999</postalCode>
+                <country>US</country>
+            </addr>
+            <telecom use="WP" value="tel:+1-333-33-3333" />
+            <telecom use="WP" value="fax:+1-555-955-1002" />
+            <telecom use="WP" value="mailto:itadmin@email.net" />
+            <informationRecipient>
+                <name>
+                    <given>I.T.</given>
+                    <family>Admin</family>
+                </name>
+            </informationRecipient>
+            <receivedOrganization>
+                <name>Level Seven Healthcare, Inc.</name>
+                <addr>
+                    <streetAddressLine>4444 Healthcare Drive</streetAddressLine>
+                    <city>Ann Arbor</city>
+                    <state>MI</state>
+                    <postalCode>99999</postalCode>
+                    <country>US</country>
+                </addr>
+            </receivedOrganization>
+        </intendedRecipient>
+    </informationRecipient>
+    <!--
         ********************************************************
         componentOf: contains the encompassingEncounter and the
         provider and facility infomation for the case
         ********************************************************
     -->
-  <componentOf>
-    <encompassingEncounter>
-      <id nullFlavor="NI" />
-      <code nullFlavor="NI"> </code>
-      <effectiveTime>
-        <low value="20161107" />
-        <high value="20161107" />
-      </effectiveTime>
-      <!--provider in charge of care when case reported-->
-      <responsibleParty>
-        <assignedEntity>
-          <id nullFlavor="NI" root="2.16.840.1.113883.4.6" />
-          <addr>
-            <streetAddressLine nullFlavor="NI" />
-            <city nullFlavor="NI" />
-            <state nullFlavor="NI" />
-            <postalCode nullFlavor="NI" />
-          </addr>
-          <telecom nullFlavor="NI" />
-          <assignedPerson>
-            
-            <name>
-              <given nullFlavor="NI" />
-              <family nullFlavor="NI" />
-            </name>
-          </assignedPerson>
-          <representedOrganization>
-            <name nullFlavor="NI" />
-            <addr>
-              <streetAddressLine nullFlavor="NI" />
-              <city nullFlavor="NI" />
-              <state nullFlavor="NI" />
-              <postalCode nullFlavor="NI" />
-            </addr>
-          </representedOrganization>
-        </assignedEntity>
-      </responsibleParty>
-      <!-- Information about facility where care was provided when case reported-->
-      <location>
-        <healthCareFacility>
-          <id nullFlavor="NI" root="2.16.840.1.113883.4.6" />
-          <!-- Facility Type-->
-          <code code="OF" codeSystem="2.16.840.1.113883.5.111" displayName="Outpatient facility" />
-          <!-- Facility location within larger healthcare organization 
+    <componentOf>
+        <encompassingEncounter>
+            <id nullFlavor="NI" />
+            <code nullFlavor="NI"> </code>
+            <effectiveTime>
+                <low value="20161107" />
+                <high value="20161107" />
+            </effectiveTime>
+            <!--provider in charge of care when case reported-->
+            <responsibleParty>
+                <assignedEntity>
+                    <id nullFlavor="NI" root="2.16.840.1.113883.4.6" />
+                    <addr>
+                        <streetAddressLine nullFlavor="NI" />
+                        <city nullFlavor="NI" />
+                        <state nullFlavor="NI" />
+                        <postalCode nullFlavor="NI" />
+                    </addr>
+                    <telecom nullFlavor="NI" />
+                    <assignedPerson>
+
+                        <name>
+                            <given nullFlavor="NI" />
+                            <family nullFlavor="NI" />
+                        </name>
+                    </assignedPerson>
+                    <representedOrganization>
+                        <name nullFlavor="NI" />
+                        <addr>
+                            <streetAddressLine nullFlavor="NI" />
+                            <city nullFlavor="NI" />
+                            <state nullFlavor="NI" />
+                            <postalCode nullFlavor="NI" />
+                        </addr>
+                    </representedOrganization>
+                </assignedEntity>
+            </responsibleParty>
+            <!-- Information about facility where care was provided when case reported-->
+            <location>
+                <healthCareFacility>
+                    <id nullFlavor="NI" root="2.16.840.1.113883.4.6" />
+                    <!-- Facility Type-->
+                    <code code="OF" codeSystem="2.16.840.1.113883.5.111" displayName="Outpatient facility" />
+                    <!-- Facility location within larger healthcare organization 
                    e.g Kaiser Vacaville within Kaiser North-->
-          <location>
-            <addr>
-              <streetAddressLine nullFlavor="NI" />
-              <city nullFlavor="NI" />
-              <state nullFlavor="NI" />
-              <postalCode nullFlavor="NI" />
-            </addr>
-          </location>
-          <!--Facility contact information-->
-          <serviceProviderOrganization>
-            <!-- Facility Name -->
-            <name nullFlavor="NI" />
-            <!-- Facility Phone -->
-            <telecom nullFlavor="NI" />
-          </serviceProviderOrganization>
-        </healthCareFacility>
-      </location>
-    </encompassingEncounter>
-  </componentOf>
-  <component>
-    <structuredBody>
-      <!--
+                    <location>
+                        <addr>
+                            <streetAddressLine nullFlavor="NI" />
+                            <city nullFlavor="NI" />
+                            <state nullFlavor="NI" />
+                            <postalCode nullFlavor="NI" />
+                        </addr>
+                    </location>
+                    <!--Facility contact information-->
+                    <serviceProviderOrganization>
+                        <!-- Facility Name -->
+                        <name nullFlavor="NI" />
+                        <!-- Facility Phone -->
+                        <telecom nullFlavor="NI" />
+                    </serviceProviderOrganization>
+                </healthCareFacility>
+            </location>
+        </encompassingEncounter>
+    </componentOf>
+    <component>
+        <structuredBody>
+            <!--
           ********************************************************
           Electronic Initial Case Report Section
           ********************************************************
       -->
-      <component>
-        <section>
-          <!-- [RR R1S1] Electronic Initial Case Report Section -->
-          <templateId root="2.16.840.1.113883.10.20.15.2.2.3" extension="2017-04-01" />
-          <code code="88082-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
-            displayName="Initial case report processing information Document" />
-          <text>
-            <!-- eICR Information -->
-            <content styleCode="Bold">eICR Information:</content>
-            <table>
-              <col width="40%" />
-              <col width="60%" />
-              <tbody>
-                <tr>
-                  <td>eICR Identifier</td>
-                  <td>Unknown</td>
-                </tr>
-                <tr>
-                  <td>An initial report for a relevant reportable condition was received on 
-                      November 14, 2017 at 11:15am with the file name "eICR_Filename.xml" but it was not processed.
-                    <br />
-                    <br /> 
-                    The public health system was unable to process the eICR file it received. 
-                    This may be due to issues with file corruption, encryption, or malformation. 
-                    The corresponding eICR may need to be identified by its file name and 
-                    the date and time it was received. Public health reporting has not been achieved. 
-                    Please correct the file error and resubmit or use another reporting mechanism to 
-                    report the case to public health.</td>
+            <component>
+                <section>
+                    <!-- [RR R1S1] Electronic Initial Case Report Section -->
+                    <templateId root="2.16.840.1.113883.10.20.15.2.2.3" extension="2017-04-01" />
+                    <code code="88082-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Initial case report processing information Document" />
+                    <text>
+                        <!-- eICR Information -->
+                        <content styleCode="Bold">eICR Information:</content>
+                        <table>
+                            <col width="40%" />
+                            <col width="60%" />
+                            <tbody>
+                                <tr>
+                                    <td>eICR Identifier</td>
+                                    <td>Unknown</td>
+                                </tr>
+                                <tr>
+                                    <td>An initial report for a relevant reportable condition was received on November 14, 2017 at 11:15am with the file name "eICR_Filename.xml" but it was not processed. <br />
+                                        <br /> The public health system was unable to process the eICR file it received. This may be due to issues with file corruption, encryption, or malformation. The corresponding eICR may need to be identified by its file name and the date and time it was
+                                        received. Public health reporting has not been achieved. Please correct the file error and resubmit or use another reporting mechanism to report the case to public health.</td>
 
-                </tr>
-              </tbody>
-            </table>
-          </text>
-          <entry>
-            <act classCode="ACT" moodCode="EVN">
-              <!-- [RR R1S1] Received eICR Information -->
-              <templateId root="2.16.840.1.113883.10.20.15.2.3.9" extension="2017-04-01" />
-              <id root="6bff7990-f218-4f9d-a5aa-eb7afa6e9a3c" />
-              <code code="RR5" codeSystem="2.16.840.1.114222.4.5.232" codeSystemName="PHIN Questions" displayName="Received eICR Information" />
-              <text xsi:type="ST">eICR_Filename.xml</text>
-              <statusCode code="completed" />
-              <!-- Receipt date/time the eICR document that this document is in response to -->
-              <effectiveTime value="20161212152000-0700" />
-              <reference typeCode="REFR">
-                <!-- This is a reference to the eICR document -->
-                <externalDocument classCode="DOCCLIN" moodCode="EVN">
-                  <!-- [C-CDA R2.0 External Document Reference] -->
-                  <templateId root="2.16.840.1.113883.10.20.22.4.115" extension="2014-06-09" />
-                  <!-- [RR R1S1 eICR External Document Reference] -->
-                  <templateId root="2.16.840.1.113883.10.20.15.2.3.10" extension="2017-04-01" />
-                  <!-- ClinicalDocument/id of the eICR CDA instance that this document is in response to -->
-                  <id nullFlavor="UNK" />
-                  <!-- eICR ClinicalDocument/code (hard coded to this) -->
-                  <code code="55751-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Public Health Case Report (eICR)" />
-                  <setId extension="sTT988" root="2.16.840.1.113883.19.5.99999.19" />
-                  <versionNumber value="1" />
-                </externalDocument>
-              </reference>
-            </act>
-          </entry>
-          <!-- eICR Processing Status -->
-          <entry>
-            <!-- eICR Not Processed Example -->
-            <act classCode="ACT" moodCode="EVN">
-              <!-- [RR R1S1] eICR Processing Status -->
-              <templateId root="2.16.840.1.113883.10.20.15.2.3.29" extension="2017-04-01" />
-              <id root="39d966b9-8a3a-4024-93d8-138e97d5898a" />
-              <code code="RRVS22" displayName="eICR was not processed - error" codeSystem="2.16.840.1.114222.4.5.274"
-                codeSystemName="PHIN VS (CDC Local Coding System)" />
-              <!-- eICR Processing Reason-->
-              <entryRelationship typeCode="RSON">
-                <observation classCode="OBS" moodCode="EVN">
-                  <!-- [RR R1S1] eICR Processing Status Reason -->
-                  <templateId root="2.16.840.1.113883.10.20.15.2.3.21" extension="2017-04-01" />
-                  <id root="e39d6ae2-8c6e-4638-9b33-412996586f42" />
-                  <code code="RR6" codeSystem="2.16.840.1.114222.4.5.232"
-                    codeSystemName="PHIN Questions" displayName="eICR processing status reason" />
-                  <value xsi:type="CD" code="RRVS23"
-                    displayName="eICR was not processed due to an error of: fatal problem with the eICR that was received"
-                    codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" />
-                </observation>
-              </entryRelationship>
-            </act>
-          </entry>
-        </section>
-      </component>
-    </structuredBody>
-  </component>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <act classCode="ACT" moodCode="EVN">
+                            <!-- [RR R1S1] Received eICR Information -->
+                            <templateId root="2.16.840.1.113883.10.20.15.2.3.9" extension="2017-04-01" />
+                            <id root="6bff7990-f218-4f9d-a5aa-eb7afa6e9a3c" />
+                            <code code="RR5" codeSystem="2.16.840.1.114222.4.5.232" codeSystemName="PHIN Questions" displayName="Received eICR Information" />
+                            <text xsi:type="ST">eICR_Filename.xml</text>
+                            <statusCode code="completed" />
+                            <!-- Receipt date/time the eICR document that this document is in response to -->
+                            <effectiveTime value="20161212152000-0700" />
+                            <reference typeCode="REFR">
+                                <!-- This is a reference to the eICR document -->
+                                <externalDocument classCode="DOCCLIN" moodCode="EVN">
+                                    <!-- [C-CDA R2.0 External Document Reference] -->
+                                    <templateId root="2.16.840.1.113883.10.20.22.4.115" extension="2014-06-09" />
+                                    <!-- [RR R1S1 eICR External Document Reference] -->
+                                    <templateId root="2.16.840.1.113883.10.20.15.2.3.10" extension="2017-04-01" />
+                                    <!-- ClinicalDocument/id of the eICR CDA instance that this document is in response to -->
+                                    <id nullFlavor="UNK" />
+                                    <!-- eICR ClinicalDocument/code (hard coded to this) -->
+                                    <code code="55751-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Public Health Case Report (eICR)" />
+                                    <setId extension="sTT988" root="2.16.840.1.113883.19.5.99999.19" />
+                                    <versionNumber value="1" />
+                                </externalDocument>
+                            </reference>
+                        </act>
+                    </entry>
+                    <!-- eICR Processing Status -->
+                    <entry>
+                        <!-- eICR Not Processed Example -->
+                        <act classCode="ACT" moodCode="EVN">
+                            <!-- [RR R1S1] eICR Processing Status -->
+                            <templateId root="2.16.840.1.113883.10.20.15.2.3.29" extension="2017-04-01" />
+                            <id root="39d966b9-8a3a-4024-93d8-138e97d5898a" />
+                            <code code="RRVS22" displayName="eICR was not processed - error" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" />
+                            <!-- eICR Processing Reason-->
+                            <entryRelationship typeCode="RSON">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <!-- [RR R1S1] eICR Processing Status Reason -->
+                                    <templateId root="2.16.840.1.113883.10.20.15.2.3.21" extension="2017-04-01" />
+                                    <id root="e39d6ae2-8c6e-4638-9b33-412996586f42" />
+                                    <code code="RR6" codeSystem="2.16.840.1.114222.4.5.232" codeSystemName="PHIN Questions" displayName="eICR processing status reason" />
+                                    <value xsi:type="CD" code="RRVS23" displayName="eICR was not processed due to an error of: fatal problem with the eICR that was received" codeSystem="2.16.840.1.114222.4.5.274" codeSystemName="PHIN VS (CDC Local Coding System)" />
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
 </ClinicalDocument>
