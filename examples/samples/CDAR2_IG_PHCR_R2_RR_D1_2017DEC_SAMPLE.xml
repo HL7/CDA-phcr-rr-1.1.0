@@ -42,7 +42,7 @@
     is considered to be published in R2.0.
 -->
 
-<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_IG_PHCR_R2_RR_D1_2017DEC_STYLESHEET.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../transforms/CDAR2_IG_PHCR_R2_RR_D1_2017DEC_STYLESHEET.xsl"?>
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:voc="http://www.lantanagroup.com/voc" xmlns="urn:hl7-org:v3"
   xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../../schema/infrastructure/cda/CDA_SDTC.xsd">
   <!--
